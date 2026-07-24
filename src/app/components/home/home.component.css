@@ -44,7 +44,7 @@
 @media (max-width: 768px) {
     .hero-section {
         min-height: 90vh;
-        background-position: 65% center;
+        background-position: 5% center;
     }
 
     .hero-section::before {
