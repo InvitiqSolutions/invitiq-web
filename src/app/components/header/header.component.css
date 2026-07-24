@@ -1,0 +1,76 @@
+/* Header */
+.header-wrapper {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #ececec;
+}
+
+/* Logo */
+.logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navigation */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #227A48;
+}
+
+/* Underline Animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #227A48;
+    transition: width .3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Contact Button */
+.contact-btn {
+    background: #227A48;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 26px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.contact-btn:hover {
+    background: #001d0b;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(13,110,253,.25);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .logo {
+        height: 48px;
+    }
+
+    .contact-btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}

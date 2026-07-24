@@ -1,0 +1,31 @@
+<div class="header-wrapper shadow-sm">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between py-3">
+
+            <!-- Logo -->
+            <div class="logo-section">
+                <img [src]="logoImg" alt="Invitiq Logo" class="logo">
+            </div>
+
+            <!-- Navigation -->
+            <nav class="d-none d-lg-flex align-items-center gap-4 nav-links">
+                <a routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">Home</a>
+
+                <a routerLink="/about" routerLinkActive="active">About</a>
+
+                <a routerLink="/services" routerLinkActive="active">Services</a>
+
+                <a routerLink="/contact" routerLinkActive="active">Contact</a>
+            </nav>
+
+            <!-- Button -->
+            <div>
+                <button class="btn contact-btn">
+                    Contact Us
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

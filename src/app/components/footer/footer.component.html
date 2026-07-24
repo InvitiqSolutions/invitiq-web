@@ -1,0 +1,216 @@
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- Company -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <img src="/images/logo.png"
+                     class="footer-logo"
+                     alt="Invitiq Logo">
+
+                <p class="footer-about">
+
+                    Building modern websites, digital experiences,
+                    SEO strategies, and marketing solutions that help
+                    businesses grow online.
+
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Navigation -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5>Navigation</h5>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Why Invitiq</a></li>
+
+                    <li><a href="#">Services</a></li>
+
+                    <li><a href="#">Process</a></li>
+
+                    <li><a href="#">FAQ</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Future Pages -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5>Explore</h5>
+
+                <ul>
+
+                    <li><a href="#">Portfolio</a></li>
+
+                    <li><a href="#">Blog</a></li>
+
+                    <li><a href="#">Case Studies</a></li>
+
+                    <li><a href="#">Careers</a></li>
+
+                    <li><a href="#">Resources</a></li>
+
+                    <li><a href="#">Pricing</a></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5>Contact</h5>
+
+                <ul class="contact-list">
+
+                    <li>
+
+                        <i class="fas fa-phone"></i>
+
+                        +91 93639 90792
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        info&#64;invitiq.com
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        Chennai, Tamil Nadu
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-clock"></i>
+
+                        Mon - Sat
+
+                        <br>
+
+                        9:00 AM - 6:00 PM
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Contact Form -->
+
+            <div class="col-lg-3">
+
+                <h5>Quick Enquiry</h5>
+
+                <form (ngSubmit)="submitEnquiry()">
+
+                    <input
+                        type="text"
+                        class="form-control mb-3"
+                        placeholder="Your Name"
+                        [(ngModel)]="enquiry.name"
+                        name="name"
+                        required>
+
+                    <input
+                        type="email"
+                        class="form-control mb-3"
+                        placeholder="Email Address"
+                        [(ngModel)]="enquiry.email"
+                        name="email"
+                        required>
+
+                    <textarea
+                        rows="4"
+                        class="form-control mb-3"
+                        placeholder="Tell us about your project..."
+                        [(ngModel)]="enquiry.message"
+                        name="message"
+                        required></textarea>
+
+                    <button
+                        class="btn footer-btn w-100">
+
+                        Send Enquiry
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+        <hr>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Invitiq. All Rights Reserved.
+
+            </p>
+
+            <div>
+
+                <a href="#">Privacy Policy</a>
+
+                <a href="#">Terms & Conditions</a>
+
+                <a href="#">Sitemap</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

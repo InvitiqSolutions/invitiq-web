@@ -1,0 +1,412 @@
+<!-- Hero -->
+<div class="hero-section">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-7">
+                <h1 class="hero-title">
+                    Your <span class="highlight">Dream</span> Website Starts Here.
+                </h1>
+
+                <h2 class="hero-subtitle">
+                    We build stunning, high-performance websites that attract visitors, build trust, and grow your business.
+                </h2>
+
+                <div class="mt-5 d-flex gap-3">
+                    <button class="btn btn-success btn-lg px-4">
+                        Get Started
+                    </button>
+
+                    <button class="btn btn-outline-success text-white btn-lg px-4">
+                        View Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Invitiq -->
+<div class="why-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title green">Why Invitiq?</h2>
+            <p class="section-subtitle">
+                We don't just build websites—we create digital experiences that help businesses
+                grow, attract customers, and build lasting trust.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <h4>Premium Quality</h4>
+
+                    <p>
+                        Every project is crafted with precision, clean code, and industry best practices
+                        for maximum quality and reliability.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                    <h4>Creative Design</h4>
+
+                    <p>
+                        Beautiful, modern interfaces that make your business stand out and leave
+                        a memorable first impression.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+
+                    <h4>Mobile Responsive</h4>
+
+                    <p>
+                        Every website is fully responsive and optimized for desktops, tablets, and smartphones, ensuring a seamless experience on every device.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <h4>SEO Optimized</h4>
+
+                    <p>
+                        Built with search engine best practices to improve visibility
+                        and bring more organic traffic.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h4>Lightning Fast</h4>
+
+                    <p>
+                        Fast loading speeds and responsive performance on every
+                        device for an outstanding user experience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h4>Dedicated Support</h4>
+
+                    <p>
+                        We stay with you even after launch, providing continuous
+                        support and improvements whenever needed.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Services -->
+ <div class="services-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="text-white fw-bold">Our Services</h2>
+            <p class="services-subtitle">
+                Everything you need to establish, grow, and scale your business online.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div
+                class="col-lg-4 col-md-6"
+                *ngFor="let service of (showAll ? services : services | slice:0:6)">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid" [ngClass]="service.icon"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+                        <h4>{{service.title}}</h4>
+                        <p>{{service.description}}</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+
+            <button class="btn show-btn" (click)="showAll = !showAll">
+
+                {{ showAll ? 'Show Less Services' : 'Show All Services' }}
+
+                <i
+                    class="fa-solid ms-2"
+                    [ngClass]="showAll ? 'fa-chevron-up' : 'fa-chevron-down'">
+                </i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Our Process -->
+ <div class="process-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="green fw-bold">Our Process</h2>
+
+            <p class="process-subtitle">
+                From your first idea to a successful launch, we follow a proven process that ensures
+                quality, transparency, and exceptional results.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <h5>Consultation</h5>
+
+                    <p>
+                        We understand your business, goals, and requirements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-card">
+                    <div class="process-number">02</div>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-pencil-ruler"></i>
+                    </div>
+
+                    <h5>Planning</h5>
+
+                    <p>
+                        We prepare the structure, strategy, and project roadmap.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-card">
+                    <div class="process-number">03</div>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <h5>Development</h5>
+
+                    <p>
+                        Our developers build a fast, secure, and scalable website.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-card">
+                    <div class="process-number">04</div>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-vial-circle-check"></i>
+                    </div>
+
+                    <h5>Testing</h5>
+
+                    <p>
+                        Every feature is tested for quality, speed, and compatibility.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-card">
+                    <div class="process-number">05</div>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+
+                    <h5>Launch</h5>
+
+                    <p>
+                        Your website goes live with complete deployment support.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-card">
+                    <div class="process-number">06</div>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h5>Support</h5>
+
+                    <p>
+                        Continuous maintenance, updates, and dedicated assistance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div> 
+
+<!-- FAQ -->
+ <div class="faq-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5 ">
+            <h2 class="text-white fw-bold">Frequently Asked Questions</h2>
+
+            <p class="faq-subtitle">
+                Find answers to the questions we receive most often.
+            </p>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="accordion" id="faqAccordion">
+
+                <div
+                    class="accordion-item"
+                    *ngFor="let faq of faqs; let i = index">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button"
+                            [class.collapsed]="i !== 0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            [attr.data-bs-target]="'#faq'+i">
+
+                            {{faq.question}}
+
+                        </button>
+
+                    </h2>
+
+                    <div
+                        [id]="'faq'+i"
+                        class="accordion-collapse collapse"
+                        [class.show]="i === 0"
+                        data-bs-parent="#faqAccordion">
+
+                        <div class="accordion-body">
+                            {{faq.answer}}
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Call to Action -->
+ <div class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="cta-tag">
+                        🚀 Let's Build Something Amazing
+                    </span>
+
+                    <h2>
+                        Ready to Grow Your Business Online?
+                    </h2>
+
+                    <p>
+                        Whether you need a professional website, an e-commerce store, SEO, or complete digital marketing, Invitiq is here to turn your ideas into results. Let's discuss your project and create something extraordinary together.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+
+                    <button class="btn cta-btn-primary me-3">
+                        Get Free Consultation
+                    </button>
+
+                    <!-- <button class="btn cta-btn-secondary mt-3 mt-lg-0">
+                        View Our Services
+                    </button> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
