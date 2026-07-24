@@ -288,14 +288,15 @@
 .services-section{
     background: linear-gradient(
         145deg,
-        #4dce83 0%,
-        #227A48 40%,
-        #195b36 75%,
-        #003b17 100%
+        #003b17 0%,
+        #195b36 40%,
+        #227A48 75%,
+        #4dce83 100%
     );
     padding:100px 0;
 }
-
+     
+    
 
 
 .services-subtitle{
@@ -635,10 +636,10 @@
 
        background: linear-gradient(
         145deg,
-        #4dce83 0%,
-        #227A48 40%,
-        #195b36 75%,
-        #003b17 100%
+        #003b17 0%,
+        #195b36 40%,
+        #227A48 75%,
+        #4dce83 100%
     );
 
 }
