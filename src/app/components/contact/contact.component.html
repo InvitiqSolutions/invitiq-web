@@ -19,7 +19,12 @@
                             Our team will get in touch with you to discuss how we can help your brand grow.
                         </p>
 
-                        <form (ngSubmit)="submitContact()" netlify>
+                        <form name="enquiry"
+                            method="POST"
+                            data-netlify="true" 
+                            (ngSubmit)="submitContact()">
+
+                            <input type="hidden" name="form-name" value="enquiry">
 
                             <div class="row g-3">
 
