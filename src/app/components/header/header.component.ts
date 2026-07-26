@@ -15,4 +15,14 @@ export class HeaderComponent {
   goToContact() {
     this.router.navigate(['/contact']);
   }
+
+  isMenuOpen: boolean = false;
+
+  toggleMenu(): void {
+      this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+      this.isMenuOpen = false;
+  }
 }

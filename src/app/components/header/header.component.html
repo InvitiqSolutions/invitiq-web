@@ -1,31 +1,118 @@
 <div class="header-wrapper shadow-sm">
+
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between py-3">
+
+        <div class="header-content">
 
             <!-- Logo -->
             <div class="logo-section">
-                <img [src]="logoImg" alt="Invitiq Logo" class="logo">
+                <img
+                    [src]="logoImg"
+                    routerLink="/"
+                    alt="Invitiq Logo"
+                    class="logo">
             </div>
 
-            <!-- Navigation -->
+            <!-- Desktop Navigation -->
             <nav class="d-none d-lg-flex align-items-center gap-4 nav-links">
-                <a routerLink="/" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{exact:true}">Home</a>
 
-                <a routerLink="/about" routerLinkActive="active">About</a>
+                <a
+                    routerLink="/"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    Home
+                </a>
 
-                <a routerLink="/service" routerLinkActive="active">Services</a>
+                <a
+                    routerLink="/about"
+                    routerLinkActive="active">
+                    About
+                </a>
 
-                <a routerLink="/contact" routerLinkActive="active">Contact</a>
+                <a
+                    routerLink="/service"
+                    routerLinkActive="active">
+                    Services
+                </a>
+
+                <a
+                    routerLink="/contact"
+                    routerLinkActive="active">
+                    Contact
+                </a>
+
             </nav>
 
-            <!-- Button -->
-            <div>
-                <button (click)="goToContact()" class="btn contact-btn">
+            <!-- Desktop Contact Button -->
+            <div class="d-none d-lg-block">
+                <button
+                    type="button"
+                    (click)="goToContact()"
+                    class="btn contact-btn">
                     Contact Us
                 </button>
             </div>
 
+            <!-- Mobile Menu Button -->
+            <button
+                type="button"
+                class="mobile-menu-btn d-lg-none"
+                (click)="toggleMenu()"
+                [class.active]="isMenuOpen"
+                aria-label="Toggle navigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
         </div>
+
+        <!-- Mobile Navigation -->
+        <div
+            class="mobile-nav d-lg-none"
+            [class.show]="isMenuOpen">
+
+            <nav>
+
+                <a
+                    routerLink="/"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    (click)="closeMenu()">
+                    Home
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    routerLink="/about"
+                    routerLinkActive="active"
+                    (click)="closeMenu()">
+                    About
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    routerLink="/service"
+                    routerLinkActive="active"
+                    (click)="closeMenu()">
+                    Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    routerLink="/contact"
+                    routerLinkActive="active"
+                    (click)="closeMenu()">
+                    Contact
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </nav>
+
+        </div>
+
     </div>
+
 </div>
