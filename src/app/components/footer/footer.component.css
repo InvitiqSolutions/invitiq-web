@@ -62,7 +62,7 @@
 
     color:#227A48;
 
-    padding-left:5px;
+    /* padding-left:5px; */
 
 }
 
@@ -102,15 +102,16 @@
 
     background:#227A48;
 
+    color:#fff;
     display:flex;
 
     align-items:center;
 
     justify-content:center;
+    text-decoration: none;
 
-    color:#fff;
 
-    transition:.3s;
+    transition: all .3s ease;
 
 }
 

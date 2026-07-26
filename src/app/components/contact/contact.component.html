@@ -1,0 +1,260 @@
+<section class="contact-section">
+    <div class="container">
+
+        <div class="contact-wrapper">
+
+            <div class="row g-0">
+
+                <!-- LEFT - CONTACT FORM -->
+                <div class="col-lg-7">
+
+                    <div class="contact-form-area">
+
+                        <span class="contact-label">LET'S TALK</span>
+
+                        <h2>Let's Build Something <span>Great Together.</span></h2>
+
+                        <p class="contact-description">
+                            Tell us a little about your business and what you're looking for.
+                            Our team will get in touch with you to discuss how we can help your brand grow.
+                        </p>
+
+                        <form (ngSubmit)="submitContact()">
+
+                            <div class="row g-3">
+
+                                <!-- Name -->
+                                <div class="col-md-6">
+                                    <label>Your Name *</label>
+
+                                    <div class="input-box">
+                                        <i class="fa-solid fa-user"></i>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Enter your name"
+                                            [(ngModel)]="contact.name"
+                                            name="name"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="col-md-6">
+                                    <label>Phone Number *</label>
+
+                                    <div class="input-box">
+                                        <i class="fa-solid fa-phone"></i>
+
+                                        <input
+                                            type="tel"
+                                            class="form-control"
+                                            placeholder="Enter phone number"
+                                            [(ngModel)]="contact.phone"
+                                            name="phone"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!-- Company -->
+                                <div class="col-12">
+                                    <label>Brand / Company Name</label>
+
+                                    <div class="input-box">
+                                        <i class="fa-solid fa-building"></i>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Enter your brand or company name"
+                                            [(ngModel)]="contact.company"
+                                            name="company">
+                                    </div>
+                                </div>
+
+                                <!-- Service -->
+                                <div class="col-12">
+                                    <label>Service Needed *</label>
+
+                                    <div class="input-box">
+                                        <i class="fa-solid fa-briefcase"></i>
+
+                                        <select
+                                            class="form-select service-select"
+                                            [(ngModel)]="contact.service"
+                                            name="service"
+                                            required>
+
+                                            <option value="" disabled>
+                                                Select a service
+                                            </option>
+                                            <option *ngFor="let service of serviceList" [value]="service">
+                                                {{service}}
+                                            </option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Query -->
+                                <div class="col-12">
+                                    <label>Tell Us About Your Requirement *</label>
+
+                                    <textarea
+                                        class="form-control query-box"
+                                        rows="5"
+                                        placeholder="Tell us about your business, goals, or what you need help with..."
+                                        [(ngModel)]="contact.query"
+                                        name="query"
+                                        required>
+                                    </textarea>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="col-12">
+
+                                    <button
+                                        type="submit"
+                                        class="contact-submit-btn">
+
+                                        Send Enquiry
+
+                                        <i class="fa-solid fa-arrow-right"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-5">
+
+                    <div class="contact-info-area">
+
+                        <!-- Logo -->
+                        <div class="contact-logo">
+                            <img
+                                src="/images/logo.png"
+                                alt="Invitiq Logo">
+                        </div>
+
+                        <h3>
+                            Your Growth Partner in the Digital World.
+                        </h3>
+
+                        <p class="info-description">
+                            From building your digital presence to generating leads,
+                            we're here to help your business become a brand people remember.
+                        </p>
+
+
+                        <!-- Contact Details -->
+
+                        <div class="contact-details">
+
+                            <a href="tel:+91 9363990792" class="contact-detail">
+
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+
+                                <div>
+                                    <span>Call Us</span>
+                                    <strong>+91 93639 90792</strong>
+                                </div>
+
+                            </a>
+
+
+                            <a href="mailto:info@invitiq.com" class="contact-detail">
+
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+
+                                <div>
+                                    <span>Email Us</span>
+                                    <strong>info&#64;invitiq.com</strong>
+                                </div>
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- Social Media -->
+
+                        <div class="social-area">
+
+                            <span>Follow Us</span>
+
+                            <div class="contact-social-icons">
+
+                                <a [href]="service.instagramUrl" target="_blank" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <a [href]="service.facedbookUrl" target="_blank" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a [href]="service.linkedInUrl" target="_blank" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+
+                                <a [href]="service.xUrl" target="_blank" aria-label="X">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+
+                                <a [href]="service.whatsappUrl" target="_blank" aria-label="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Page Links -->
+
+                        <div class="contact-links">
+
+                            <span>Explore Invitiq</span>
+
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <a routerLink="/">Home</a>
+                                    <a routerLink="/about">About Us</a>
+                                    <a routerLink="/service">Services</a>
+                                </div>
+
+                                <div class="col-6">
+                                    <a routerLink="/portfolio">Portfolio</a>
+                                    <a routerLink="/blog">Blog</a>
+                                    <a routerLink="/contact">Contact</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

@@ -1,23 +1,23 @@
 <!-- Hero -->
-<div class="hero-section">
+<div id="hero-section" class="hero-section">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-7">
                 <h1 class="hero-title">
-                    Your <span class="highlight">Dream</span> Website Starts Here.
+                    Take Your <span class="highlight">Dream</span> Business Beyond Ordinary.
                 </h1>
 
                 <h2 class="hero-subtitle">
-                    We build stunning, high-performance websites that attract visitors, build trust, and grow your business.
+                    we build powerful digital experiences that turn attention into customers and businesses into brands.
                 </h2>
 
                 <div class="mt-5 d-flex gap-3">
-                    <button class="btn btn-success btn-lg px-4">
-                        Get Started
+                    <button [routerLink]="['/service']" class="btn btn-success btn-lg px-4">
+                        Explore Our Services
                     </button>
 
-                    <button class="btn btn-outline-success text-white btn-lg px-4">
-                        View Portfolio
+                    <button [routerLink]="['/contact']" class="btn btn-outline-success text-white btn-lg px-4">
+                        Get Free Consultation
                     </button>
                 </div>
             </div>
@@ -26,7 +26,7 @@
 </div>
 
 <!-- Why Invitiq -->
-<div class="why-section py-5">
+<div id="why-section" class="why-section py-5">
     <div class="container">
 
         <div class="text-center mb-5">
@@ -135,7 +135,7 @@
 
 
 <!-- Services -->
- <div class="services-section py-5">
+ <div id="services-section" class="services-section py-5">
 
     <div class="container">
 
@@ -152,7 +152,7 @@
                 class="col-lg-4 col-md-6"
                 *ngFor="let service of (showAll ? services : services | slice:0:6)">
 
-                <div class="service-card">
+                <div class="service-card" [routerLink]="['/service', service.slug]">
 
                     <div class="service-icon">
                         <i class="fa-solid" [ngClass]="service.icon"></i>
@@ -191,7 +191,7 @@
 </div>
 
 <!-- Our Process -->
- <div class="process-section py-5">
+ <div id="process-section" class="process-section py-5">
 
     <div class="container">
 
@@ -309,7 +309,7 @@
 </div> 
 
 <!-- FAQ -->
- <div class="faq-section">
+ <div id="faq-section" class="faq-section">
 
     <div class="container">
 
@@ -367,7 +367,7 @@
 </div>
 
 <!-- Call to Action -->
- <div class="cta-section">
+ <div id="cta-section" class="cta-section">
 
     <div class="container">
 
@@ -393,7 +393,7 @@
 
                 <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
 
-                    <button class="btn cta-btn-primary me-3">
+                    <button (click)="goToContact()" class="btn cta-btn-primary me-3">
                         Get Free Consultation
                     </button>
 

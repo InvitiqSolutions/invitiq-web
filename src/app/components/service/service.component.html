@@ -1,0 +1,76 @@
+<section class="services-page">
+
+    <div class="container">
+
+        <!-- PAGE HEADING -->
+
+        <div class="services-header text-center">
+
+            <span class="section-label">
+                WHAT WE DO
+            </span>
+
+            <h1>
+                Everything Your Brand Needs to
+                <span>Grow Online.</span>
+            </h1>
+
+            <p>
+                From building your digital presence to attracting the right
+                audience and generating leads, Invitiq provides complete
+                digital solutions designed to help your business grow.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="row g-4">
+
+            <div
+                class="col-lg-4 col-md-6"
+                *ngFor="let service of services; let i = index">
+
+                <div class="service-page-card">
+
+                    <span class="service-number">
+                        {{ (i + 1).toString().padStart(2, '0') }}
+                    </span>
+
+                    <div class="service-page-icon">
+                        <i
+                            class="fa-solid"
+                            [ngClass]="service.icon">
+                        </i>
+                    </div>
+
+                    <span class="service-category">
+                        {{ service.category }}
+                    </span>
+
+                    <h3>{{ service.title }}</h3>
+
+                    <p>{{ service.description }}</p>
+
+                    <!-- EXPLORE BUTTON -->
+                    <button
+                        type="button"
+                        class="explore-service-btn"
+                        [routerLink]="['/service', service.slug]">
+
+                        Explore Service
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

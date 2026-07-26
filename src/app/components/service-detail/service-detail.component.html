@@ -1,0 +1,657 @@
+<div *ngIf="selectedService">
+
+    <!-- ==============================
+         HERO SECTION
+    =============================== -->
+
+    <section class="service-hero">
+
+        <div class="hero-shape hero-shape-one"></div>
+        <div class="hero-shape hero-shape-two"></div>
+
+        <div class="container position-relative">
+
+            <div class="row align-items-center">
+
+                <!-- LEFT CONTENT -->
+
+                <div class="col-lg-7">
+
+                    <div class="service-hero-content">
+
+                        <span class="service-category-badge">
+                            <i class="fa-solid" [ngClass]="selectedService.icon"></i>
+                            {{ selectedService.category }}
+                        </span>
+
+                        <h1>
+                            {{ selectedService.heroTitle }}
+                        </h1>
+
+                        <p>
+                            {{ selectedService.heroDescription }}
+                        </p>
+
+                        <div class="hero-actions">
+
+                            <button
+                                type="button"
+                                class="primary-btn"
+                                routerLink="/contact">
+
+                                Get Free Consultation
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                routerLink="/contact">
+
+                                <i class="fa-regular fa-comments"></i>
+                                Let's Talk
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT VISUAL -->
+
+                <div class="col-lg-5 d-none d-lg-block">
+
+                    <div class="hero-visual">
+
+                        <div class="hero-icon-circle">
+
+                            <i
+                                class="fa-solid"
+                                [ngClass]="selectedService.icon">
+                            </i>
+
+                        </div>
+
+                        <div class="floating-card floating-card-one">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Growth Focused</span>
+                        </div>
+
+                        <div class="floating-card floating-card-two">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span>Result Driven</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         QUICK OVERVIEW
+    =============================== -->
+
+    <section class="overview-section">
+
+        <div class="container">
+
+            <div class="overview-wrapper">
+
+                <div
+                    class="overview-item"
+                    *ngFor="let item of selectedService.overview">
+
+                    <div class="overview-icon">
+                        <i
+                            class="fa-solid"
+                            [ngClass]="item.icon">
+                        </i>
+                    </div>
+
+                    <span>{{ item.title }}</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         WHY THIS SERVICE
+    =============================== -->
+
+    <section class="why-service-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- VISUAL -->
+
+                <div class="col-lg-5">
+
+                    <div class="why-visual">
+
+                        <div class="why-main-icon">
+                            <i
+                                class="fa-solid"
+                                [ngClass]="selectedService.icon">
+                            </i>
+                        </div>
+
+                        <div class="why-decoration decoration-one"></div>
+                        <div class="why-decoration decoration-two"></div>
+
+                        <div class="why-small-card">
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                            <div>
+                                <strong>Built for Growth</strong>
+                                <span>Strategy that moves your business forward.</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="col-lg-7">
+
+                    <div class="section-content">
+
+                        <span class="section-label">
+                            WHY IT MATTERS
+                        </span>
+
+                        <h2>
+                            {{ selectedService.whyTitle }}
+                        </h2>
+
+                        <p class="section-description">
+                            {{ selectedService.whyDescription }}
+                        </p>
+
+                        <div class="why-points">
+
+                            <div
+                                class="why-point"
+                                *ngFor="let point of selectedService.whyPoints">
+
+                                <span class="check-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <span>{{ point }}</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FEATURES / WHAT WE DO
+    =============================== -->
+
+    <section class="features-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-label">
+                    WHAT WE DO
+                </span>
+
+                <h2>
+                    {{ selectedService.featuresTitle }}
+                </h2>
+
+                <p>
+                    Every solution is carefully planned around your business,
+                    your audience, and your growth objectives.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div
+                    class="col-lg-4 col-md-6"
+                    *ngFor="let feature of selectedService.features; let i = index">
+
+                    <div class="feature-card">
+
+                        <span class="feature-number">
+                            {{ (i + 1).toString().padStart(2, '0') }}
+                        </span>
+
+                        <div class="feature-icon">
+
+                            <i
+                                class="fa-solid"
+                                [ngClass]="feature.icon">
+                            </i>
+
+                        </div>
+
+                        <h3>{{ feature.title }}</h3>
+
+                        <p>
+                            {{ feature.description }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         OUR PROCESS
+    =============================== -->
+
+    <section class="process-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-label light-label">
+                    OUR PROCESS
+                </span>
+
+                <h2 class="text-white">
+                    From Strategy to Results.
+                </h2>
+
+                <p class="process-heading-description">
+                    A clear and structured approach designed to turn ideas
+                    into meaningful business results.
+                </p>
+
+            </div>
+
+
+            <div class="process-wrapper">
+
+                <div
+                    class="process-item"
+                    *ngFor="let step of selectedService.process">
+
+                    <div class="process-number">
+                        {{ step.number }}
+                    </div>
+
+                    <div class="process-content">
+
+                        <h3>{{ step.title }}</h3>
+
+                        <p>{{ step.description }}</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         BENEFITS
+    =============================== -->
+
+    <section class="benefits-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-label">
+                    WHAT YOU GET
+                </span>
+
+                <h2>
+                    Built Around Your Business Growth.
+                </h2>
+
+                <p>
+                    We focus on outcomes that strengthen your brand,
+                    improve your digital presence, and create new opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div
+                    class="col-lg-3 col-md-6"
+                    *ngFor="let benefit of selectedService.benefits">
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+
+                            <i
+                                class="fa-solid"
+                                [ngClass]="benefit.icon">
+                            </i>
+
+                        </div>
+
+                        <h3>{{ benefit.title }}</h3>
+
+                        <p>{{ benefit.description }}</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         TECHNOLOGIES
+    =============================== -->
+
+    <section
+        class="technologies-section"
+        *ngIf="selectedService.technologies?.length">
+
+        <div class="container">
+
+            <div class="technology-wrapper">
+
+                <div class="technology-heading">
+
+                    <span class="section-label">
+                        TOOLS & TECHNOLOGIES
+                    </span>
+
+                    <h2>
+                        The Right Tools for the Right Solution.
+                    </h2>
+
+                </div>
+
+
+                <div class="technology-list">
+
+                    <span
+                        class="technology-item"
+                        *ngFor="let technology of selectedService.technologies">
+
+                        {{ technology }}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         WHY INVITIQ
+    =============================== -->
+
+    <section class="why-invitiq-section">
+
+        <div class="container">
+
+            <div class="why-invitiq-wrapper">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-7">
+
+                        <span class="section-label light-label">
+                            WHY INVITIQ
+                        </span>
+
+                        <h2>
+                            We Don't Just Deliver Services.
+                            <span>We Focus on Your Growth.</span>
+                        </h2>
+
+                        <p>
+                            Every business is different. That's why we focus on
+                            understanding your goals first and building solutions
+                            that create meaningful value for your brand.
+                        </p>
+
+
+                        <div class="invitiq-points">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Tailored Strategies
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Modern Solutions
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Transparent Communication
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Performance Focused
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                End-to-End Support
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Long-Term Partnership
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-5">
+
+                        <div class="growth-card">
+
+                            <div class="growth-icon">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+
+                            <span>OUR GOAL</span>
+
+                            <h3>
+                                Your Growth Is Our Success.
+                            </h3>
+
+                            <p>
+                                We combine strategy, creativity, technology,
+                                and marketing to help businesses build a
+                                stronger digital future.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FAQ
+    =============================== -->
+
+    <section class="service-faq-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-label">
+                    FAQ
+                </span>
+
+                <h2>
+                    Questions? We've Got Answers.
+                </h2>
+
+                <p>
+                    Here are some common questions about
+                    {{ selectedService.title }}.
+                </p>
+
+            </div>
+
+
+            <div class="faq-wrapper">
+
+                <div
+                    class="accordion"
+                    id="serviceFaqAccordion">
+
+                    <div
+                        class="accordion-item"
+                        *ngFor="let faq of selectedService.faqs; let i = index">
+
+                        <h2
+                            class="accordion-header"
+                            [id]="'faqHeading' + i">
+
+                            <button
+                                class="accordion-button"
+                                [class.collapsed]="i !== 0"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#faqCollapse' + i"
+                                [attr.aria-expanded]="i === 0"
+                                [attr.aria-controls]="'faqCollapse' + i">
+
+                                {{ faq.question }}
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            [id]="'faqCollapse' + i"
+                            class="accordion-collapse collapse"
+                            [class.show]="i === 0"
+                            [attr.aria-labelledby]="'faqHeading' + i"
+                            data-bs-parent="#serviceFaqAccordion">
+
+                            <div class="accordion-body">
+                                {{ faq.answer }}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FINAL CTA
+    =============================== -->
+
+    <section class="service-cta-section">
+
+        <div class="container">
+
+            <div class="service-cta">
+
+                <span>READY TO GET STARTED?</span>
+
+                <h2>
+                    Let's Turn Your Next Idea Into
+                    <strong>Something Powerful.</strong>
+                </h2>
+
+                <p>
+                    Tell us about your business and what you're looking for.
+                    We'll help you find the right solution to move forward.
+                </p>
+
+                <button
+                    type="button"
+                    class="cta-button"
+                    routerLink="/contact">
+
+                    Start Your Project
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

@@ -22,16 +22,15 @@
 
                 <div class="social-icons">
 
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a [href]="service.facedbookUrl" target="_blank"  aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
 
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a [href]="service.instagramUrl" target="_blank"  aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
 
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a [href]="service.linkedInUrl" target="_blank"  aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
 
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a [href]="service.xUrl" target="_blank"  aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
 
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-
+                    <a [href]="service.whatsappUrl" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
 
             </div>
@@ -45,19 +44,31 @@
                 <h5>Navigation</h5>
 
                 <ul>
+                    <li>
+                        <a routerLink="/" fragment="home">Home</a>
+                    </li>
 
-                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a routerLink="/" fragment="why-section">Why Invitiq</a>
+                    </li>
 
-                    <li><a href="#">Why Invitiq</a></li>
+                    <li>
+                        <a routerLink="/" fragment="services-section">Services</a>
+                    </li>
 
-                    <li><a href="#">Services</a></li>
+                    <li>
+                        <a routerLink="/" fragment="process-section">Process</a>
+                    </li>
 
-                    <li><a href="#">Process</a></li>
+                    <li>
+                        <a routerLink="/" fragment="faq-section">FAQ</a>
+                    </li>
 
-                    <li><a href="#">FAQ</a></li>
-
-                    <li><a href="#">Contact</a></li>
-
+                    <li>
+                        <a routerLink="/contact" routerLinkActive="active">
+                            Contact
+                        </a>
+                    </li>
                 </ul>
 
             </div>

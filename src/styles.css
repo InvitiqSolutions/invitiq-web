@@ -6,3 +6,11 @@
 .light-green{
     color:#227A48
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 190px;
+}

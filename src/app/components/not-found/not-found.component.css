@@ -1,0 +1,132 @@
+.not-found-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(34, 122, 72, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f4faf6 50%,
+            #eaf5ee 100%
+        );
+}
+
+.not-found-content {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* 404 */
+
+.error-code {
+    font-size: clamp(110px, 18vw, 190px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -10px;
+    color: #001d0b;
+    margin-bottom: 25px;
+}
+
+.error-code span {
+    color: #227A48;
+}
+
+/* Heading */
+
+.not-found-content h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 700;
+    color: #001d0b;
+    margin-bottom: 18px;
+}
+
+/* Description */
+
+.not-found-content p {
+    max-width: 580px;
+    margin: 0 auto 35px;
+    color: #5f6f65;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Buttons */
+
+.error-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.error-actions button {
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.home-btn {
+    border: 2px solid #227A48;
+    background: #227A48;
+    color: #ffffff;
+}
+
+.home-btn:hover {
+    background: #001d0b;
+    border-color: #001d0b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 29, 11, 0.18);
+}
+
+.contact-btn {
+    border: 2px solid #227A48;
+    background: transparent;
+    color: #227A48;
+}
+
+.contact-btn:hover {
+    background: #227A48;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.error-actions i {
+    margin: 0 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .not-found-page {
+        padding: 30px 15px;
+    }
+
+    .error-code {
+        letter-spacing: -5px;
+    }
+
+    .not-found-content p {
+        font-size: 15px;
+    }
+
+    .error-actions {
+        flex-direction: column;
+    }
+
+    .error-actions button {
+        width: 100%;
+        max-width: 280px;
+    }
+}

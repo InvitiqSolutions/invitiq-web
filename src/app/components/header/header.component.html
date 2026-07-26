@@ -14,14 +14,14 @@
 
                 <a routerLink="/about" routerLinkActive="active">About</a>
 
-                <a routerLink="/services" routerLinkActive="active">Services</a>
+                <a routerLink="/service" routerLinkActive="active">Services</a>
 
                 <a routerLink="/contact" routerLinkActive="active">Contact</a>
             </nav>
 
             <!-- Button -->
             <div>
-                <button class="btn contact-btn">
+                <button (click)="goToContact()" class="btn contact-btn">
                     Contact Us
                 </button>
             </div>
