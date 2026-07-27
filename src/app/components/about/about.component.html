@@ -1,0 +1,501 @@
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="about-hero">
+
+    <div class="hero-shape hero-shape-one"></div>
+    <div class="hero-shape hero-shape-two"></div>
+
+    <div class="container position-relative">
+
+        <div class="row align-items-center min-vh-75">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    <span></span>
+                    ABOUT INVITIQ
+                </div>
+
+                <h1>
+                    We Don't Just Build Digital Presence.
+                    <span>We Build Brands That Grow.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Invitiq brings creativity, technology, and digital strategy
+                    together to help businesses build stronger brands, reach the
+                    right audience, generate opportunities, and grow confidently
+                    in the digital world.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a routerLink="/contact" class="primary-btn">
+                        Let's Work Together
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a routerLink="/service" class="secondary-btn">
+                        Explore Services
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WHO WE ARE
+========================================= -->
+
+<section class="who-section section-space">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-visual">
+
+                    <div class="visual-main">
+
+                        <div class="brand-symbol">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                        <span>IDEAS</span>
+
+                        <h3>
+                            Strategy meets
+                            <strong>creativity.</strong>
+                        </h3>
+
+                    </div>
+
+                    <div class="floating-card card-one">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Technology</span>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <span>Marketing</span>
+                    </div>
+
+                    <div class="floating-card card-three">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>Creative</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    <span></span>
+                    WHO WE ARE
+                </div>
+
+                <h2 class="section-title">
+                    Your Digital Growth Partner,
+                    <span>Not Just Another Agency.</span>
+                </h2>
+
+                <p>
+                    We believe a strong digital presence is more than having a
+                    beautiful website or running advertisements. It's about creating
+                    a connected brand experience that builds trust, attracts the
+                    right people, and helps your business move forward.
+                </p>
+
+                <p>
+                    That's why Invitiq combines web development, digital marketing,
+                    SEO, social media, advertising, lead generation, branding, and
+                    analytics into solutions built around real business goals.
+                </p>
+
+                <div class="who-highlight">
+
+                    <div class="highlight-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>One vision. Multiple digital capabilities.</strong>
+                        <span>
+                            Everything working together to strengthen your brand.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     MISSION / VISION
+========================================= -->
+
+<section class="mission-section section-space">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="mission-card">
+
+                    <div class="mission-number">01</div>
+
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <span>OUR MISSION</span>
+
+                    <h3>
+                        Turn Digital Opportunities Into
+                        Business Growth.
+                    </h3>
+
+                    <p>
+                        To help businesses build professional, powerful, and
+                        meaningful digital experiences through creative,
+                        practical, and result-focused solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="mission-card vision-card">
+
+                    <div class="mission-number">02</div>
+
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-binoculars"></i>
+                    </div>
+
+                    <span>OUR VISION</span>
+
+                    <h3>
+                        Build Brands People Recognize,
+                        Remember & Trust.
+                    </h3>
+
+                    <p>
+                        To become a trusted digital growth partner for businesses,
+                        helping ambitious ideas evolve into stronger and more
+                        successful brands.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     VALUES
+========================================= -->
+
+<section class="values-section section-space">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <div class="section-label justify-content-center">
+                <span></span>
+                WHAT DRIVES US
+                <span></span>
+            </div>
+
+            <h2 class="section-title">
+                Values Behind <span>Everything We Create.</span>
+            </h2>
+
+            <p>
+                The principles that guide how we think, create,
+                collaborate, and deliver.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div
+                class="col-lg-4 col-md-6"
+                *ngFor="let value of values">
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        <i class="fa-solid" [ngClass]="value.icon"></i>
+                    </div>
+
+                    <h4>{{ value.title }}</h4>
+
+                    <p>
+                        {{ value.description }}
+                    </p>
+
+                    <div class="card-line"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     BUSINESS GROWTH JOURNEY
+========================================= -->
+
+<section class="growth-section section-space">
+
+    <div class="container">
+
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <div class="section-label light-label">
+                    <span></span>
+                    WHAT WE HELP YOU ACHIEVE
+                </div>
+
+                <h2 class="section-title text-white">
+                    From Being Seen To
+                    <span>Being Remembered.</span>
+                </h2>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <p class="growth-intro">
+                    Our work is designed around one connected journey —
+                    helping your business move from digital presence to
+                    measurable growth.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="growth-journey">
+
+            <div
+                class="growth-item"
+                *ngFor="let step of growthSteps">
+
+                <div class="growth-number">
+                    {{ step.number }}
+                </div>
+
+                <div class="growth-icon">
+                    <i class="fa-solid" [ngClass]="step.icon"></i>
+                </div>
+
+                <h4>{{ step.title }}</h4>
+
+                <p>{{ step.description }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     EXPERTISE
+========================================= -->
+
+<section class="expertise-section section-space">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="section-label">
+                    <span></span>
+                    OUR EXPERTISE
+                </div>
+
+                <h2 class="section-title">
+                    Everything Your Brand Needs
+                    <span>To Move Forward.</span>
+                </h2>
+
+                <p class="expertise-description">
+                    From building your digital foundation to attracting,
+                    engaging, and converting customers, our capabilities
+                    work together around your business.
+                </p>
+
+                <a routerLink="/service" class="text-link">
+                    Explore all our services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="expertise-grid">
+
+                    <div
+                        class="expertise-item"
+                        *ngFor="let item of expertise">
+
+                        <i
+                            class="fa-solid"
+                            [ngClass]="item.icon">
+                        </i>
+
+                        <span>{{ item.name }}</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WHO WE WORK WITH
+========================================= -->
+
+<section class="audience-section">
+
+    <div class="container">
+
+        <div class="audience-wrapper">
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-5">
+
+                    <div class="section-label">
+                        <span></span>
+                        WHO WE WORK WITH
+                    </div>
+
+                    <h2>
+                        Built For Businesses
+                        <span>Ready To Grow.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="audience-list">
+
+                        <div
+                            class="audience-pill"
+                            *ngFor="let audience of audiences">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            {{ audience }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FINAL CTA
+========================================= -->
+
+<section class="about-cta">
+
+    <div class="cta-circle circle-one"></div>
+    <div class="cta-circle circle-two"></div>
+
+    <div class="container position-relative">
+
+        <div class="cta-content">
+
+            <span>LET'S CREATE SOMETHING MEANINGFUL</span>
+
+            <h2>
+                Have A Business?
+                <strong>Let's Build What's Next.</strong>
+            </h2>
+
+            <p>
+                Whether you're starting from scratch or ready to take your
+                existing brand further, we're ready to help you create,
+                market, and grow.
+            </p>
+
+            <a routerLink="/contact" class="cta-btn">
+                Start Your Project
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
