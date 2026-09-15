@@ -207,21 +207,25 @@
 
                 <h5>Quick Enquiry</h5>
 
-                <form (ngSubmit)="submitEnquiry()">
+                <form name="enquiry"
+                            method="POST"
+                            data-netlify="true" 
+                            (ngSubmit)="submitContact()"
+                            >
 
                     <input
                         type="text"
                         class="form-control mb-3"
                         placeholder="Your Name"
-                        [(ngModel)]="enquiry.name"
+                        [(ngModel)]="contact.name"
                         name="name"
                         required>
 
                     <input
                         type="email"
                         class="form-control mb-3"
-                        placeholder="Email Address"
-                        [(ngModel)]="enquiry.email"
+                        placeholder="Phone number"
+                        [(ngModel)]="contact.phone"
                         name="email"
                         required>
 
@@ -229,7 +233,7 @@
                         rows="4"
                         class="form-control mb-3"
                         placeholder="Tell us about your project..."
-                        [(ngModel)]="enquiry.message"
+                        [(ngModel)]="contact.query"
                         name="message"
                         required></textarea>
 
