@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +12,24 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class HomeComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private seo: SeoService) { }
 
   showAll = false;
 
+  ngOnInit(){
+    this.seo.updateSeo({
+      
+    title:
+    'Invitiq | Website Development, SEO & Digital Marketing',
+
+    description:
+    'Invitiq helps businesses grow through professional website development, SEO, branding, digital marketing, social media management, lead generation, and paid advertising.',
+
+    keywords:
+    'website development,digital marketing,seo,social media,branding,lead generation'
+
+    });
+  }
 services = [
   {
     slug: 'website-development',
@@ -88,30 +103,30 @@ services = [
     description: 'Transform outdated websites into modern experiences.',
     icon: 'fa-arrows-rotate'
   },
-  {
-    slug: 'local-seo',
-    title: 'Local SEO',
-    description: 'Help nearby customers discover your business.',
-    icon: 'fa-location-dot'
-  },
-  {
-    slug: 'on-page-seo',
-    title: 'On-Page SEO',
-    description: 'Optimize your website content for better rankings.',
-    icon: 'fa-file-circle-check'
-  },
-  {
-    slug: 'technical-seo',
-    title: 'Technical SEO',
-    description: 'Improve technical performance and search visibility.',
-    icon: 'fa-gears'
-  },
-  {
-    slug: 'google-business-profile-optimization',
-    title: 'Google Business Profile Optimization',
-    description: 'Improve your visibility on Google Search and Maps.',
-    icon: 'fa-map-location-dot'
-  },
+  // {
+  //   slug: 'local-seo',
+  //   title: 'Local SEO',
+  //   description: 'Help nearby customers discover your business.',
+  //   icon: 'fa-location-dot'
+  // },
+  // {
+  //   slug: 'on-page-seo',
+  //   title: 'On-Page SEO',
+  //   description: 'Optimize your website content for better rankings.',
+  //   icon: 'fa-file-circle-check'
+  // },
+  // {
+  //   slug: 'technical-seo',
+  //   title: 'Technical SEO',
+  //   description: 'Improve technical performance and search visibility.',
+  //   icon: 'fa-gears'
+  // },
+  // {
+  //   slug: 'google-business-profile-optimization',
+  //   title: 'Google Business Profile Optimization',
+  //   description: 'Improve your visibility on Google Search and Maps.',
+  //   icon: 'fa-map-location-dot'
+  // },
   {
     slug: 'google-ads',
     title: 'Google Ads',
@@ -124,18 +139,18 @@ services = [
     description: 'Generate leads through Facebook and Instagram ads.',
     icon: 'fa-rectangle-ad'
   },
-  {
-    slug: 'ppc-campaign-management',
-    title: 'PPC Campaign Management',
-    description: 'Manage paid campaigns for better advertising returns.',
-    icon: 'fa-arrow-pointer'
-  },
-  {
-    slug: 'retargeting-campaigns',
-    title: 'Retargeting Campaigns',
-    description: 'Reconnect with visitors and turn them into customers.',
-    icon: 'fa-crosshairs'
-  },
+  // {
+  //   slug: 'ppc-campaign-management',
+  //   title: 'PPC Campaign Management',
+  //   description: 'Manage paid campaigns for better advertising returns.',
+  //   icon: 'fa-arrow-pointer'
+  // },
+  // {
+  //   slug: 'retargeting-campaigns',
+  //   title: 'Retargeting Campaigns',
+  //   description: 'Reconnect with visitors and turn them into customers.',
+  //   icon: 'fa-crosshairs'
+  // },
   {
     slug: 'brand-development',
     title: 'Brand Development',
@@ -154,12 +169,12 @@ services = [
     description: 'Creative branded content for your social platforms.',
     icon: 'fa-photo-film'
   },
-  {
-    slug: 'content-marketing',
-    title: 'Content Marketing',
-    description: 'Strategic content that attracts and engages customers.',
-    icon: 'fa-file-pen'
-  },
+  // {
+  //   slug: 'content-marketing',
+  //   title: 'Content Marketing',
+  //   description: 'Strategic content that attracts and engages customers.',
+  //   icon: 'fa-file-pen'
+  // },
   {
     slug: 'email-marketing',
     title: 'Email Marketing',
@@ -172,84 +187,84 @@ services = [
     description: 'Create a distinctive identity for your brand.',
     icon: 'fa-pen-nib'
   },
-  {
-    slug: 'graphic-design',
-    title: 'Graphic Design',
-    description: 'Creative visuals for marketing and brand communication.',
-    icon: 'fa-palette'
-  },
-  {
-    slug: 'payment-gateway-integration',
-    title: 'Payment Gateway Integration',
-    description: 'Accept secure online payments through your website.',
-    icon: 'fa-credit-card'
-  },
-  {
-    slug: 'api-integration',
-    title: 'API Integration',
-    description: 'Connect your website with third-party services.',
-    icon: 'fa-plug'
-  },
-  {
-    slug: 'content-management',
-    title: 'Content Management',
-    description: 'Manage and update your website content with ease.',
-    icon: 'fa-file-lines'
-  },
+  // {
+  //   slug: 'graphic-design',
+  //   title: 'Graphic Design',
+  //   description: 'Creative visuals for marketing and brand communication.',
+  //   icon: 'fa-palette'
+  // },
+  // {
+  //   slug: 'payment-gateway-integration',
+  //   title: 'Payment Gateway Integration',
+  //   description: 'Accept secure online payments through your website.',
+  //   icon: 'fa-credit-card'
+  // },
+  // {
+  //   slug: 'api-integration',
+  //   title: 'API Integration',
+  //   description: 'Connect your website with third-party services.',
+  //   icon: 'fa-plug'
+  // },
+  // {
+  //   slug: 'content-management',
+  //   title: 'Content Management',
+  //   description: 'Manage and update your website content with ease.',
+  //   icon: 'fa-file-lines'
+  // },
   {
     slug: 'website-maintenance',
     title: 'Website Maintenance',
     description: 'Regular updates, backups, fixes, and technical support.',
     icon: 'fa-screwdriver-wrench'
   },
-  {
-    slug: 'website-speed-optimization',
-    title: 'Website Speed Optimization',
-    description: 'Improve loading speed and Core Web Vitals.',
-    icon: 'fa-bolt'
-  },
-  {
-    slug: 'website-security',
-    title: 'Website Security',
-    description: 'Protect your website against security threats.',
-    icon: 'fa-shield-halved'
-  },
-  {
-    slug: 'ssl-installation',
-    title: 'SSL Installation',
-    description: 'Secure your website with HTTPS encryption.',
-    icon: 'fa-lock'
-  },
-  {
-    slug: 'hosting-domain-setup',
-    title: 'Hosting & Domain Setup',
-    description: 'Complete domain, hosting, DNS, and email configuration.',
-    icon: 'fa-server'
-  },
-  {
-    slug: 'website-migration',
-    title: 'Website Migration',
-    description: 'Move your website safely between platforms or hosting.',
-    icon: 'fa-right-left'
-  },
+  // {
+  //   slug: 'website-speed-optimization',
+  //   title: 'Website Speed Optimization',
+  //   description: 'Improve loading speed and Core Web Vitals.',
+  //   icon: 'fa-bolt'
+  // },
+  // {
+  //   slug: 'website-security',
+  //   title: 'Website Security',
+  //   description: 'Protect your website against security threats.',
+  //   icon: 'fa-shield-halved'
+  // },
+  // {
+  //   slug: 'ssl-installation',
+  //   title: 'SSL Installation',
+  //   description: 'Secure your website with HTTPS encryption.',
+  //   icon: 'fa-lock'
+  // },
+  // {
+  //   slug: 'hosting-domain-setup',
+  //   title: 'Hosting & Domain Setup',
+  //   description: 'Complete domain, hosting, DNS, and email configuration.',
+  //   icon: 'fa-server'
+  // },
+  // {
+  //   slug: 'website-migration',
+  //   title: 'Website Migration',
+  //   description: 'Move your website safely between platforms or hosting.',
+  //   icon: 'fa-right-left'
+  // },
   {
     slug: 'google-analytics',
     title: 'Google Analytics',
     description: 'Track visitors and understand your website performance.',
     icon: 'fa-chart-pie'
   },
-  {
-    slug: 'google-search-console',
-    title: 'Google Search Console Setup',
-    description: 'Monitor search visibility, indexing, and performance.',
-    icon: 'fa-chart-simple'
-  },
-  {
-    slug: 'conversion-tracking',
-    title: 'Conversion Tracking',
-    description: 'Measure leads, enquiries, sales, and customer actions.',
-    icon: 'fa-bullseye'
-  }
+  // {
+  //   slug: 'google-search-console',
+  //   title: 'Google Search Console Setup',
+  //   description: 'Monitor search visibility, indexing, and performance.',
+  //   icon: 'fa-chart-simple'
+  // },
+  // {
+  //   slug: 'conversion-tracking',
+  //   title: 'Conversion Tracking',
+  //   description: 'Measure leads, enquiries, sales, and customer actions.',
+  //   icon: 'fa-bullseye'
+  // }
 ];
 
 faqs = [

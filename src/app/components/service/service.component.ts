@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
   selector: 'app-service',
@@ -10,7 +11,24 @@ import { RouterLink } from '@angular/router';
   styleUrl: './service.component.css'
 })
 export class ServiceComponent {
-  constructor() { }
+  constructor(
+      private seo: SeoService
+  ) {}
+
+  ngOnInit(){
+    this.seo.updateSeo({
+
+    title:
+    'Our Services | Invitiq',
+
+    description:
+    'Explore Invitiq services including website development, SEO, digital marketing, branding, lead generation, social media management, and advertising.',
+
+    keywords:
+    'website development services,seo services,digital marketing'
+
+    });
+  }
 services = [
 
   // =========================
@@ -111,34 +129,34 @@ services = [
   // SEO
   // =========================
 
-  {
-    slug: 'local-seo',
-    title: 'Local SEO',
-    category: 'SEO',
-    icon: 'fa-location-dot',
-    description: 'Improve your local search presence and help nearby customers discover your business when searching for relevant products and services.'
-  },
-  {
-    slug: 'on-page-seo',
-    title: 'On-Page SEO',
-    category: 'SEO',
-    icon: 'fa-file-circle-check',
-    description: 'Optimize website content, headings, metadata, internal links, images, and keywords to improve search engine visibility.'
-  },
-  {
-    slug: 'technical-seo',
-    title: 'Technical SEO',
-    category: 'SEO',
-    icon: 'fa-gears',
-    description: 'Optimize website structure, indexing, performance, mobile compatibility, crawling, and technical factors that influence search rankings.'
-  },
-  {
-    slug: 'google-business-profile-optimization',
-    title: 'Google Business Profile Optimization',
-    category: 'SEO',
-    icon: 'fa-map-location-dot',
-    description: 'Optimize your Google Business Profile to improve visibility in Google Search and Maps and attract more local customers.'
-  },
+  // {
+  //   slug: 'local-seo',
+  //   title: 'Local SEO',
+  //   category: 'SEO',
+  //   icon: 'fa-location-dot',
+  //   description: 'Improve your local search presence and help nearby customers discover your business when searching for relevant products and services.'
+  // },
+  // {
+  //   slug: 'on-page-seo',
+  //   title: 'On-Page SEO',
+  //   category: 'SEO',
+  //   icon: 'fa-file-circle-check',
+  //   description: 'Optimize website content, headings, metadata, internal links, images, and keywords to improve search engine visibility.'
+  // },
+  // {
+  //   slug: 'technical-seo',
+  //   title: 'Technical SEO',
+  //   category: 'SEO',
+  //   icon: 'fa-gears',
+  //   description: 'Optimize website structure, indexing, performance, mobile compatibility, crawling, and technical factors that influence search rankings.'
+  // },
+  // {
+  //   slug: 'google-business-profile-optimization',
+  //   title: 'Google Business Profile Optimization',
+  //   category: 'SEO',
+  //   icon: 'fa-map-location-dot',
+  //   description: 'Optimize your Google Business Profile to improve visibility in Google Search and Maps and attract more local customers.'
+  // },
 
   // =========================
   // ADVERTISING
@@ -158,20 +176,20 @@ services = [
     icon: 'fa-rectangle-ad',
     description: 'Facebook and Instagram advertising campaigns designed to increase awareness, generate leads, drive traffic, and improve conversions.'
   },
-  {
-    slug: 'ppc-campaign-management',
-    title: 'PPC Campaign Management',
-    category: 'Advertising',
-    icon: 'fa-arrow-pointer',
-    description: 'End-to-end pay-per-click campaign management focused on reaching the right audience and maximizing your advertising investment.'
-  },
-  {
-    slug: 'retargeting-campaigns',
-    title: 'Retargeting Campaigns',
-    category: 'Advertising',
-    icon: 'fa-crosshairs',
-    description: 'Reconnect with people who previously visited or interacted with your business and encourage them to return and convert.'
-  },
+  // {
+  //   slug: 'ppc-campaign-management',
+  //   title: 'PPC Campaign Management',
+  //   category: 'Advertising',
+  //   icon: 'fa-arrow-pointer',
+  //   description: 'End-to-end pay-per-click campaign management focused on reaching the right audience and maximizing your advertising investment.'
+  // },
+  // {
+  //   slug: 'retargeting-campaigns',
+  //   title: 'Retargeting Campaigns',
+  //   category: 'Advertising',
+  //   icon: 'fa-crosshairs',
+  //   description: 'Reconnect with people who previously visited or interacted with your business and encourage them to return and convert.'
+  // },
 
   // =========================
   // CONTENT & BRANDING
@@ -198,13 +216,13 @@ services = [
     icon: 'fa-photo-film',
     description: 'Creative posts, promotional content, campaign creatives, and branded visuals designed specifically for your social media presence.'
   },
-  {
-    slug: 'content-marketing',
-    title: 'Content Marketing',
-    category: 'Digital Marketing',
-    icon: 'fa-file-pen',
-    description: 'Strategic content designed to educate your audience, strengthen brand authority, improve visibility, and generate customer interest.'
-  },
+  // {
+  //   slug: 'content-marketing',
+  //   title: 'Content Marketing',
+  //   category: 'Digital Marketing',
+  //   icon: 'fa-file-pen',
+  //   description: 'Strategic content designed to educate your audience, strengthen brand authority, improve visibility, and generate customer interest.'
+  // },
   {
     slug: 'email-marketing',
     title: 'Email Marketing',
@@ -219,39 +237,39 @@ services = [
     icon: 'fa-pen-nib',
     description: 'Professional logo designs that create a distinctive, recognizable, and memorable visual identity for your business.'
   },
-  {
-    slug: 'graphic-design',
-    title: 'Graphic Design',
-    category: 'Branding',
-    icon: 'fa-palette',
-    description: 'Creative visual designs for social media, advertisements, marketing campaigns, promotions, and business branding.'
-  },
+  // {
+  //   slug: 'graphic-design',
+  //   title: 'Graphic Design',
+  //   category: 'Branding',
+  //   icon: 'fa-palette',
+  //   description: 'Creative visual designs for social media, advertisements, marketing campaigns, promotions, and business branding.'
+  // },
 
   // =========================
   // INTEGRATIONS
   // =========================
 
-  {
-    slug: 'payment-gateway-integration',
-    title: 'Payment Gateway Integration',
-    category: 'Integration',
-    icon: 'fa-credit-card',
-    description: 'Integrate secure online payment solutions into your website or e-commerce store for smooth customer transactions.'
-  },
-  {
-    slug: 'api-integration',
-    title: 'API Integration',
-    category: 'Integration',
-    icon: 'fa-plug',
-    description: 'Connect your website or web application with third-party platforms, services, payment systems, and business tools.'
-  },
-  {
-    slug: 'content-management',
-    title: 'Content Management',
-    category: 'Web Development',
-    icon: 'fa-file-lines',
-    description: 'Implement easy-to-manage content systems that allow your business to update website content efficiently.'
-  },
+  // {
+  //   slug: 'payment-gateway-integration',
+  //   title: 'Payment Gateway Integration',
+  //   category: 'Integration',
+  //   icon: 'fa-credit-card',
+  //   description: 'Integrate secure online payment solutions into your website or e-commerce store for smooth customer transactions.'
+  // },
+  // {
+  //   slug: 'api-integration',
+  //   title: 'API Integration',
+  //   category: 'Integration',
+  //   icon: 'fa-plug',
+  //   description: 'Connect your website or web application with third-party platforms, services, payment systems, and business tools.'
+  // },
+  // {
+  //   slug: 'content-management',
+  //   title: 'Content Management',
+  //   category: 'Web Development',
+  //   icon: 'fa-file-lines',
+  //   description: 'Implement easy-to-manage content systems that allow your business to update website content efficiently.'
+  // },
 
   // =========================
   // SUPPORT & MAINTENANCE
@@ -264,41 +282,41 @@ services = [
     icon: 'fa-screwdriver-wrench',
     description: 'Ongoing website maintenance including content updates, bug fixes, monitoring, backups, improvements, and technical assistance.'
   },
-  {
-    slug: 'website-speed-optimization',
-    title: 'Website Speed Optimization',
-    category: 'Support',
-    icon: 'fa-bolt',
-    description: 'Improve website loading speed, Core Web Vitals, performance, and user experience through technical optimization.'
-  },
-  {
-    slug: 'website-security',
-    title: 'Website Security',
-    category: 'Support',
-    icon: 'fa-shield-halved',
-    description: 'Improve website security through updates, monitoring, backups, secure configurations, and security best practices.'
-  },
-  {
-    slug: 'ssl-installation',
-    title: 'SSL Installation',
-    category: 'Support',
-    icon: 'fa-lock',
-    description: 'Secure your website with SSL and HTTPS configuration to protect visitor data and improve customer trust.'
-  },
-  {
-    slug: 'hosting-domain-setup',
-    title: 'Hosting & Domain Setup',
-    category: 'Support',
-    icon: 'fa-server',
-    description: 'Complete assistance with domain registration, hosting configuration, DNS setup, SSL configuration, email, and website deployment.'
-  },
-  {
-    slug: 'website-migration',
-    title: 'Website Migration',
-    category: 'Support',
-    icon: 'fa-right-left',
-    description: 'Move your website between hosting providers or platforms while minimizing downtime and protecting your existing content.'
-  },
+  // {
+  //   slug: 'website-speed-optimization',
+  //   title: 'Website Speed Optimization',
+  //   category: 'Support',
+  //   icon: 'fa-bolt',
+  //   description: 'Improve website loading speed, Core Web Vitals, performance, and user experience through technical optimization.'
+  // },
+  // {
+  //   slug: 'website-security',
+  //   title: 'Website Security',
+  //   category: 'Support',
+  //   icon: 'fa-shield-halved',
+  //   description: 'Improve website security through updates, monitoring, backups, secure configurations, and security best practices.'
+  // },
+  // {
+  //   slug: 'ssl-installation',
+  //   title: 'SSL Installation',
+  //   category: 'Support',
+  //   icon: 'fa-lock',
+  //   description: 'Secure your website with SSL and HTTPS configuration to protect visitor data and improve customer trust.'
+  // },
+  // {
+  //   slug: 'hosting-domain-setup',
+  //   title: 'Hosting & Domain Setup',
+  //   category: 'Support',
+  //   icon: 'fa-server',
+  //   description: 'Complete assistance with domain registration, hosting configuration, DNS setup, SSL configuration, email, and website deployment.'
+  // },
+  // {
+  //   slug: 'website-migration',
+  //   title: 'Website Migration',
+  //   category: 'Support',
+  //   icon: 'fa-right-left',
+  //   description: 'Move your website between hosting providers or platforms while minimizing downtime and protecting your existing content.'
+  // },
 
   // =========================
   // ANALYTICS
@@ -311,20 +329,20 @@ services = [
     icon: 'fa-chart-pie',
     description: 'Track website visitors, traffic sources, user behavior, conversions, and important metrics to understand your website performance.'
   },
-  {
-    slug: 'google-search-console-setup',
-    title: 'Google Search Console Setup',
-    category: 'Analytics',
-    icon: 'fa-chart-simple',
-    description: 'Configure and monitor Google Search Console to understand search performance, indexing, keywords, and technical SEO issues.'
-  },
-  {
-    slug: 'conversion-tracking',
-    title: 'Conversion Tracking',
-    category: 'Analytics',
-    icon: 'fa-bullseye',
-    description: 'Track enquiries, calls, purchases, form submissions, and other important actions to measure your marketing performance.'
-  }
+  // {
+  //   slug: 'google-search-console-setup',
+  //   title: 'Google Search Console Setup',
+  //   category: 'Analytics',
+  //   icon: 'fa-chart-simple',
+  //   description: 'Configure and monitor Google Search Console to understand search performance, indexing, keywords, and technical SEO issues.'
+  // },
+  // {
+  //   slug: 'conversion-tracking',
+  //   title: 'Conversion Tracking',
+  //   category: 'Analytics',
+  //   icon: 'fa-bullseye',
+  //   description: 'Track enquiries, calls, purchases, form submissions, and other important actions to measure your marketing performance.'
+  // }
 
 ];
 }

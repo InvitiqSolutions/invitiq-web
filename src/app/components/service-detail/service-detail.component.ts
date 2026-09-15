@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
   selector: 'app-service-detail',
@@ -14,9 +15,55 @@ import { RouterModule } from '@angular/router';
   styleUrl: './service-detail.component.css'
 })
 export class ServiceDetailComponent implements OnInit {
+  
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private seo: SeoService
+  ) {}
+
+    ngOnInit(): void {
+
+    const slug = this.route.snapshot.paramMap.get('slug');
+
+  this.service = this.serviceDetails.find(x => x.slug === slug);
+
+  if (this.service) {
+
+    this.seo.updateSeo({
+
+      title: `${this.service.title} | Invitiq`,
+
+      description:
+        `${this.service.title} by Invitiq. We help businesses grow through professional digital solutions, creative strategies, and result-driven services tailored to your business needs.`,
+
+      keywords:
+        `${this.service.title}, Invitiq, Digital Marketing, Website Development, SEO, Branding`
+
+    });
+
+  }
+
+
+    this.route.paramMap.subscribe(params => {
+
+      const slug = params.get('slug');
+
+      this.selectedService = this.serviceDetails.find(
+        service => service.slug === slug
+      );
+
+      if (!this.selectedService) {
+        this.router.navigate(['/services']);
+      }
+
+    });
+
+  }
+
 
   selectedService: any;
-
+  service: any;
 
   serviceDetails = [
 
@@ -3673,28 +3720,6 @@ export class ServiceDetailComponent implements OnInit {
   ];
 
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
-
-
-  ngOnInit(): void {
-
-    this.route.paramMap.subscribe(params => {
-
-      const slug = params.get('slug');
-
-      this.selectedService = this.serviceDetails.find(
-        service => service.slug === slug
-      );
-
-      if (!this.selectedService) {
-        this.router.navigate(['/services']);
-      }
-
-    });
-
-  }
+  
 
 }

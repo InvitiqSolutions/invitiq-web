@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonService } from '../../../shared/models/services/common.service';
+import { CommonService } from '../../../shared/services/common.service';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../../shared/services/seo.service';
 @Component({
   selector: 'app-contact',
   imports: [FormsModule,CommonModule,RouterLink],
@@ -11,7 +12,23 @@ import { RouterLink } from '@angular/router';
 })
 export class ContactComponent {
 
-  constructor(protected service : CommonService) { }
+  constructor(protected service : CommonService,private seo: SeoService) { }
+  
+  
+    ngOnInit(){
+      this.seo.updateSeo({
+
+      title:
+      "Contact Invitiq | Let's Build Your Brand",
+
+      description:
+      'Contact Invitiq to discuss your website development, SEO, digital marketing, branding, or lead generation project.',
+
+      keywords:
+      'contact invitiq'
+
+      });
+    }
   contact = {
     name: '',
     phone: '',

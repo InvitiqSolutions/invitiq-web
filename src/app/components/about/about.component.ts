@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
   selector: 'app-about',
@@ -10,7 +11,24 @@ import { RouterLink } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  constructor(
+      private seo: SeoService
+  ) {}
 
+  ngOnInit(){
+    this.seo.updateSeo({
+
+    title:
+    'About Invitiq | Your Digital Growth Partner',
+
+    description:
+    'Learn about Invitiq and how we help businesses grow with websites, SEO, branding, digital marketing, lead generation, and creative solutions.',
+
+    keywords:
+    'about invitiq,digital agency,website company'
+
+    });
+  }
   values = [
     {
       icon: 'fa-gem',
